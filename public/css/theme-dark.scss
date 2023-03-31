@@ -1,0 +1,805 @@
+$dark-blue: #020d26;
+$buttercup-color: #db8c23;
+$sante-fe: #b56953;
+$hot-toddy: #ab842a;
+$color-white: #ffffff;
+
+$dark-color: #1d1d1d;
+$bg-color: #252525;
+
+.switch-box {
+    position: fixed;
+    bottom: 15px;
+    right: 120px;
+    z-index: 9999;
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        border: 1.5px solid $buttercup-color;
+        transition: 0.4s;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 25px;
+            width: 25px;
+            left: 0px;
+            bottom: 4px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            transition: 0.4s;
+            box-shadow: 0 0px 15px #2020203d;
+            background: white url('../img/night.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.round {
+            border-radius: 34px;
+            &::before {
+                border-radius: 50%;
+            }
+        }
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 30px;
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    input:checked + .slider {
+        background-color: $buttercup-color;
+    }
+      
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;
+    }
+      
+    input:checked + .slider:before {
+        transform: translateX(24px);
+        background: white url('../img/sunny.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.theme-dark {
+    $regal-blue: #ffffff;
+    $paragraph-color: #ffffff;
+    $border-color: #252525;
+    body {
+        background: $dark-color;
+        color: $color-white; 
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-white; 
+    }
+    h3 {
+        color: $color-white; 
+        a {
+            color: $color-white;
+            transition: 0.7s;
+        }
+    }
+    p {
+        color: $color-white; 
+    }
+    .section-title {
+        span {
+            color: $color-white;
+        }
+    }
+    .section-bg {
+        background-color: $bg-color !important;
+    }
+    .top-header {
+       background-color: $bg-color;
+    }
+    .main-nav {
+        .navbar {
+            .navbar-brand {
+                .logo-one {
+                    display: none;
+                }
+                .logo-two {
+                    display: inline-block;
+                }
+            }
+        }
+        nav {
+            .navbar-nav  {
+                .nav-item {
+                    a {
+                        color: $color-white;
+                        i {
+                            color: $color-white;
+                        }
+                    }
+                    .dropdown-menu {
+                        background-color: $bg-color !important;
+                        li {
+                            a {
+                                color: $color-white !important;
+                                &.active {
+                                    color: $sante-fe !important;
+                                }
+                                &:hover {
+                                    color: $sante-fe !important;
+                                }
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+    }
+    .mobile-nav {
+        .logo {
+            .logo-two {
+                display: inline-block;
+            }
+            .logo-one {
+                display: none;
+            }
+        }
+    }
+    .mean-container {
+        .mean-bar {
+            background-color: $bg-color;
+        }
+        .navbar-nav {
+            background-color: $dark-color;
+        }
+        .mean-nav {
+            ul {
+                li {
+                    a {
+                        color: $color-white;
+                    }
+                    .dropdown-menu {
+                        background-color: $dark-color;
+                    }
+                }
+            }
+        }
+    }
+    .sticky-nav {
+        .main-nav {
+            background-color: $dark-color;
+        }
+        .oftop-nav {
+            background-color: $dark-color;
+        }
+    }
+    .side-btn-area {
+        .call-btn {
+            color: $color-white;
+        }
+    }
+    .home-slider-content {
+        span {
+            color: $color-white;
+        }
+    }
+    .home-slider-item {
+        &::before {
+            opacity: 0.9;
+        }
+    }
+    .oftop-slider-area {
+        background-color: #000000;
+        border-color: #252525;
+    }
+    .inner-banner {
+        &::before {
+            background-color: #000000;
+            opacity: 0.9;
+        }
+    }
+    .team-area {
+        background-color: $bg-color;
+        background-image: none;
+    }
+    .team-card {
+        .content {
+            background-color: $dark-color;
+           
+        }
+    }
+    .development-content {
+        .section-title-two {
+            h2 {
+                color: $color-white;
+            }
+        }
+    }
+    .development-section {
+        background-color: $bg-color;
+        background-image: none;
+    }
+    .development-item {
+        .content {
+            background-color: $dark-color;
+            border-color: #252525;
+            h3 {
+                color: $color-white;
+            }
+        }
+    }
+    .innovation-content-two {
+        .section-title-two {
+            .color-innovation {
+                color: $color-white;
+            }
+        }
+    }
+
+    .property-details {
+        background-color: $bg-color;
+    }
+    .property-details-list {
+        ul {
+            li {
+                a {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    .service-area {
+        background-color: $bg-color;
+    }
+    .service-item {
+        background-color: $bg-color;
+        border-color: #252525;
+        a {
+            h3 {
+                color: $color-white;
+                transition: 0.7s;
+            }
+        }
+    }
+    .service-card {
+        background-color: $dark-color;
+        i {
+            color: $color-white;
+        }
+        a {
+            h3 {
+                color: $color-white;
+                transition: 0.7s;
+            }
+        }
+        &:hover {
+            a {
+                h3 {
+                    color: $buttercup-color;
+                }
+                &:hover {
+                    b {
+                       color: $color-white; 
+                    }
+                }
+            }
+        }
+    }
+    .service-card-bg-two {
+        background-color: $bg-color;
+    }
+    .service-details-area {
+        .section-title {
+            h2 {
+                color: $color-white;
+            }
+        }
+    }
+    .service-details-content {
+        .progressbar-area {
+            .single-progressbar {
+                h3 {
+                    color: $color-white;
+                }
+                .progressbar-count {
+                    .progressbar-nuber {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+    .property-section-text {
+        .section-title-two {
+            h2 {
+                color: $color-white;
+            }
+        }
+    }
+    .apartment-offer-two {
+        &::before {
+            opacity: 0.9;
+        }
+    }
+    .offer-item-bg2 {
+        background-color: $bg-color;
+    }
+    .property-item {
+        .section-title {
+            h2 {
+                a {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    .property-counter {
+        background-color: $dark-color;
+        border-color: $bg-color;
+    }
+    .property-card {
+        .content {
+            background-color: $bg-color;
+            border-color: #252525;
+            a {
+                h3 {
+                    color: $color-white;
+                    transition: 0.7s;
+                }
+            }
+            .learn-more-btn {
+                &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    .counter-bg2 {
+        background-color: $bg-color;
+    }
+    .house-content-two {
+        background-color: $bg-color;
+        border-color: #252525;
+        .house-list {
+            li {
+                color: $color-white;
+            }
+        }
+    }
+    .house-card {
+        .content {
+            background-color: $bg-color;
+        }
+    }
+    .single-property {
+        .images {
+            .property-content {
+                background-color: $bg-color;
+                border-color: #252525;
+                a {
+                    h3 {
+                        color: $color-white;
+                    }
+                }
+                .learn-more-btn {
+                    &:hover {
+                        color: $sante-fe;
+                    }
+                }
+            }
+        }
+    }
+    .project-bg2 {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $bg-color;
+            opacity: 0.9;
+        }
+    }
+    .project-bg1 {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $bg-color;
+            opacity: 0.9;
+        }
+    }
+    .project-card {
+        background-color: $bg-color;
+        border-color: #373737;
+        ul {
+            li {
+                color: $color-white;
+            }
+        }
+    }
+    .apartment-item {
+        ul {
+            li {
+                color: $color-white;
+            }
+        }
+        a {
+            h3 {
+                color: $color-white;
+            }
+        }
+    }
+    .room-details-card {
+        .content {
+            background-color: $bg-color;
+            border-color: #373737;
+        }
+    }
+    .room-details-item {
+        .room-details-slider {
+            background-color: $bg-color;
+            border-color: #373737;
+        }
+    }
+    .innovation-slider {
+        background-color: $bg-color;
+    }
+    .efficiency-card {
+        background-color: $bg-color;
+    }
+    .counter-bg1 {
+        background-color: $bg-color;
+    }
+    .offer-item {
+        border-color: #373737;
+    }
+    .house-details-area {
+        background-color: $bg-color;
+    }
+    .house-content {
+        .house-list {
+            li {
+                color: $color-white;
+            }
+        }
+    }
+    .single-product {
+        .product-content {
+            ul {
+                li {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    .cart-wraps-area {
+        .cart-table {
+            table {
+                thead {
+                    tr {
+                        th {
+                            color: $color-white;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            color: $color-white;
+                            &.product-name {
+                                a {
+                                    color: $color-white;
+                                }
+                            }
+                            &.product-subtotal {
+                                .remove {
+                                    i {
+                                        color: $color-white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cart-wraps-area {
+        .cart-calc {
+            background-color: $bg-color;
+            .nice-select {
+                background-color: $bg-color;
+                color: #6c777d;
+            }
+            .cart-wraps-form {
+                h3 {
+                    color: $color-white;
+                }
+                .form-group {
+                    .form-control {
+                        background-color: $dark-color;
+                    }
+                }
+            }
+        }
+      
+        .cart-totals {
+            background-color: $bg-color;
+            ul {
+                li {
+                    color: $color-white;
+                    span {
+                        color: #a8a3a3;
+                    }
+                }
+            }
+        }
+    }
+    .contact-area {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $bg-color;
+            opacity: 0.9;
+        }
+    }
+    .contact-form {
+        background-color: $dark-color;
+        .form-group {
+            .form-control {
+                background-color: $bg-color;
+                color: $color-white;
+            }
+        }
+    }
+    .testimonials-card {
+        background-color: $bg-color;
+        &::before {
+            opacity: 0.1;
+        }
+    }
+    .testimonial-item {
+        &::before {
+            opacity: 0.1;
+        }
+    }
+    .testimonial-slider {
+        .owl-nav {
+            .owl-prev, .owl-next {
+                color: $color-white !important;
+            }
+        }
+    }
+    .forward-area {
+        &::before {
+            background-color: $bg-color;
+        }
+    }
+    .forward-content {
+        .signature {
+            ul {
+                li {
+                    .signature-img1 {
+                        display: none;
+                    }
+                    .signature-img2 {
+                        display: inline-block;
+                    }
+                    h3 {
+                        color: $color-white;
+                    }
+                    span {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+    .user-all-form {
+        .contact-form {
+            .agree-label {
+                label {
+                    color: $color-white;
+                }
+            }
+            .recover-sign-up {
+                color: $color-white;
+            }
+        }
+    }
+    .blog-card {
+        .content {
+            border-color: $border-color;
+        }
+    }
+    .blog-article {
+        .article-comment {
+            li {
+                .content {
+                    h3 {
+                        color: $color-white;
+                    }
+                }
+                .content-list {
+                    h3 {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+        .article-content {
+            .content-text {
+                &::before {
+                    color: $color-white;
+                }
+            }
+        }
+        .blockquote {
+            &::before {
+                color: $color-white;
+            }
+            p {
+                color: $color-white;
+            }
+        }
+        .article-post {
+            .article-post-share {
+                a {
+                    h3 {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+    .blog-widget {
+        .title {
+            color: $color-white;
+        }
+        &.search-widget {
+            .search-form {
+                .form-control {
+                    background-color: $bg-color;
+                    color: $color-white;
+                }
+            }
+        }
+        &.blog-widget-tag {
+            ul {
+                li {
+                    a {
+                        color: #a5a2a2;
+                    }
+                    &:hover {
+                        a {
+                            color: $buttercup-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .newsletter-area {
+        background-color: $bg-color;
+    }
+    .newsletter-content {
+        i {
+            color: $color-white;
+        }
+    }
+    .newsletter-form {
+        .form-control {
+            background-color: $dark-color;
+            color: $color-white;
+        }
+    }
+    .map-content {
+        background-color: $bg-color;
+    }
+    .footer-top  {
+        background-color: $dark-color;
+    }
+    .footer-bg2 {
+        &::before {
+            background-color: #060606;
+        }
+    }
+    .single-footer-widget {
+        .logo {
+            .footer-logo1 {
+                display: none;
+            }
+            .footer-logo2 {
+                display: inline-block;
+            }
+        }
+        .footer-list {
+            li {
+                a {
+                    color: #b8b6b6;
+                    &:hover {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+        .footer-contact-list {
+            li {
+                span {
+                    color: $buttercup-color;
+                }
+                a {
+                    color: #b8b6b6;
+                    &:hover {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        background-color: $bg-color;
+    }
+    .error-area {
+        &::before {
+            background-color: #000000;
+            opacity: 0.9;
+        }
+    }
+    .coming-soon-area {
+        &::before {
+            opacity: 0.9;
+            background-color: $dark-color;
+        }
+        .coming-soon-content {
+            background-color: $bg-color;
+            h1 {
+                color: $color-white;
+            }
+            #timer {
+                div {
+                   
+                    color: $color-white;
+                    span {
+                        color: $color-white;
+                    }
+                }
+            }
+            .newsletter-form {
+                .input-newsletter {
+                    background-color: $dark-color;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    
+}
