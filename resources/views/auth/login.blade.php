@@ -39,7 +39,7 @@
                             </div>
                         </div>
                     </div><!-- .nk-block-head -->
-                    <form method="POST" action="Precious">
+                    <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="form-group">
                             <div class="form-label-group">
